@@ -19,7 +19,7 @@ public:
     virtual void detectLines() = 0;
     virtual void detectBall() = 0;
     virtual void detectNao() = 0;
-    virtual void detectGoad() = 0;
+    virtual void detectGoal() = 0;
 private:
     void connectToNao(std::string IP);
 };
