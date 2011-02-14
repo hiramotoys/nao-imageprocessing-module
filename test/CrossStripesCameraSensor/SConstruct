@@ -1,2 +1,16 @@
+import os
+import os.path
+import shutil
+AL_DIR = os.environ['AL_DIR']
 env = Environment()
-env.SharedLibrary('cscsensor', ['WrapCrossStripesCameraSensor.cpp'])
+env['CC'] = '/usr/bin/gcc-4.0'
+env['CXX'] = '/usr/bin/g++-4.0'
+env['CCFLAGS'] = '-Wall'
+env['LIBS'] = ['cv', 'cvaux', 'cxcore', 'highgui', 'alcore', 'alcommon', 'naoqiclient']
+env['LIBPATH'] = [AL_DIR + '/lib']
+env['CPPPATH'] = [AL_DIR + '/include']
+src = ['WrapCrossStripesCameraSensor.cpp', '../../src/CrossStripesCameraSensor.cpp', '../../src/CameraSensor.cpp']
+env.SharedLibrary('cscsensor', src)
+if not os.path.exists('../../lib'):
+       os.mkdir('../../lib')
+shutil.move('libcscsensor.dylib', '../../lib')
