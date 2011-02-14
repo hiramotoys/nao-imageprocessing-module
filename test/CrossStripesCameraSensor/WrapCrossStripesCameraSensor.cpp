@@ -1,9 +1,6 @@
-#ifdef __cplusplus
-extern "C" {
-#endif
+#include "WrapCrossStripesCameraSensor.h"
+#include "../../src/CrossStripesCameraSensor.h"
 
-//wrapper function
-
-#ifdef __cplusplus
+void imageprocessing(const char *readfilename, const char *writefilemame){
+    
 }
-#endif
