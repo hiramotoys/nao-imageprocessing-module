@@ -15,13 +15,13 @@ public:
     CameraSensor();
     CameraSensor(std::string IP);
     virtual ~CameraSensor();
-    virtual void updateImage();
+    virtual void updateImage() = 0;
     virtual void detectLines() = 0;
     virtual void detectBall() = 0;
     virtual void detectNao() = 0;
     virtual void detectGoad() = 0;
 private:
-    connectToNao(std::string IP);
+    void connectToNao(std::string IP);
 };
 
 #endif // ImageWidget_H

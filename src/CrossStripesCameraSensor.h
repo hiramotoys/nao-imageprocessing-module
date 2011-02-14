@@ -2,6 +2,7 @@
 #define CrossStripesCameraSensor_H
 
 #include <opencv/cv.h>
+#include "CameraSensor.h"
 
 class CrossStripesCameraSensor : public CameraSensor{
 private:
@@ -13,7 +14,7 @@ public:
     void detectLines();
     void detectBall();
     void detectNao();
-    void detectGoad();
-}
+    void detectGoal();
+};
 
 #endif // CrossStripesCameraSensor
