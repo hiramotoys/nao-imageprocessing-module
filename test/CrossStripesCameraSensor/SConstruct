@@ -10,4 +10,4 @@ env['LIBS'] = ['cv', 'cvaux', 'cxcore', 'highgui', 'alcore', 'alcommon', 'naoqic
 env['LIBPATH'] = [AL_DIR + '/lib']
 env['CPPPATH'] = [AL_DIR + '/include']
 src = ['WrapCrossStripesCameraSensor.cpp', '../../src/CrossStripesCameraSensor.cpp', '../../src/CameraSensor.cpp']
-env.SharedLibrary('../../lib/cscsensor', src)
+env.SharedLibrary('cscsensor', src)
